@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hassan Travels - Brand Identity & Logo Studio</title>
+  <meta name="description" content="Official Brand Identity, Vector Logo Suite, Design Guidelines, and Visual Assets for Hassan Travels luxury travel agency." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#F59E0B',
+              'gold-light': '#FDE68A',
+              'gold-dark': '#B45309',
+              navy: '#0B132B',
+              'navy-light': '#1C2541',
+              'navy-dark': '#060B18',
+              azure: '#0284C7',
+              emerald: '#059669',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          },
+          animation: {
+            'spin-slow': 'spin 20s linear infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(245, 158, 11, 0.2)' },
+              '100%': { boxShadow: '0 0 45px rgba(245, 158, 11, 0.6)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glass-card-light {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #B45309 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-gradient {
+      border-image: linear-gradient(135deg, #FDE68A, #F59E0B, #B45309) 1;
+    }
+    .mesh-gradient-dark {
+      background-color: #060B18;
+      background-image: 
+        radial-gradient(at 10% 20%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(2, 132, 199, 0.2) 0px, transparent 50%),
+        radial-gradient(at 50% 80%, rgba(180, 83, 9, 0.15) 0px, transparent 60%);
+    }
+  </style>
+</head>
+<body class="bg-[#060B18] text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500 selection:text-black">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-900/60 via-amber-600/40 to-slate-900 border-b border-amber-500/20 text-xs py-2 px-4 text-center flex items-center justify-between">
+    <div class="container mx-auto flex items-center justify-between">
+      <span class="flex items-center gap-2 text-amber-200">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+        Official Hassan Travels Brand Guidelines & Vector Suite v2.4
+      </span>
+      <div class="flex items-center gap-4 text-slate-300">
+        <a href="index.html" class="text-amber-400 hover:text-amber-300 font-medium flex items-center gap-1 transition-colors">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Main Website
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Mini Brand Logo -->
+      <a href="logo.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 via-amber-600 to-amber-800 p-0.5 shadow-lg shadow-amber-500/20 transition-transform group-hover:scale-105">
+          <div class="w-full h-full bg-[#060B18] rounded-[10px] flex items-center justify-center">
+            <!-- Vector Monogram -->
+            <svg class="w-6 h-6 text-amber-400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 25V75M75 25V75M25 50H75" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+              <path d="M15 35C35 15 65 15 85 35" stroke="#FDE68A" stroke-width="4" stroke-linecap="round"/>
+              <path d="M15 65C35 85 65 85 85 65" stroke="#F59E0B" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="50" cy="50" r="10" fill="#F59E0B" fill-opacity="0.3" stroke="#FDE68A" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <span class="font-heading font-extrabold text-xl tracking-wider text-white flex items-center gap-1.5">
+            HASSAN <span class="gold-gradient-text font-serif">TRAVELS</span>
+          </span>
+          <span class="block text-[10px] tracking-[0.25em] text-amber-400/80 uppercase font-semibold">Brand Identity Studio</span>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#primary-emblem" class="hover:text-amber-400 transition-colors">Primary Logo</a>
+        <a href="#variations" class="hover:text-amber-400 transition-colors">All Variations</a>
+        <a href="#studio-customizer" class="hover:text-amber-400 transition-colors">Interactive Studio</a>
+        <a href="#mockups" class="hover:text-amber-400 transition-colors">3D Mockups</a>
+        <a href="#palette" class="hover:text-amber-400 transition-colors">Brand Specs</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <button onclick="downloadAllAssets()" class="px-4 py-2 text-xs font-semibold rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center gap-2 shadow-lg shadow-amber-500/25 transition-all hover:scale-105 active:scale-95">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Download Logo Pack</span>
+        </button>
+        <a href="index.html" class="px-3.5 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-all flex items-center gap-1.5">
+          <i data-lucide="globe" class="w-4 h-4 text-amber-400"></i>
+          <span class="hidden sm:inline">Visit</span> Landing Page
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="relative pt-12 pb-16 overflow-hidden mesh-gradient-dark border-b border-slate-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold tracking-wide uppercase mb-6">
+        <i data-lucide="award" class="w-4 h-4"></i>
+        Signature Visual Identity & Design System
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-heading text-white tracking-tight mb-4 max-w-4xl mx-auto">
+        Crafted for Global Prestige & <span class="gold-gradient-text">Timeless Luxury</span>
+      </h1>
+      <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+        The official visual brand marks for <strong class="text-slate-200">Hassan Travels</strong>. Combining celestial navigation, supersonic flight dynamics, and golden royal heraldry into an iconic brand identity.
+      </p>
+
+      <!-- Quick Stats & Badges -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+        <div class="p-4 rounded-xl glass-card border border-slate-800">
+          <div class="text-2xl font-bold font-heading text-amber-400">100%</div>
+          <div class="text-xs text-slate-400">Vector SVG Scalable</div>
+        </div>
+        <div class="p-4 rounded-xl glass-card border border-slate-800">
+          <div class="text-2xl font-bold font-heading text-amber-400">4 Formats</div>
+          <div class="text-xs text-slate-400">Primary, Minimal, Crest, App</div>
+        </div>
+        <div class="p-4 rounded-xl glass-card border border-slate-800">
+          <div class="text-2xl font-bold font-heading text-amber-400">AAA</div>
+          <div class="text-xs text-slate-400">WCAG Contrast Ratio</div>
+        </div>
+        <div class="p-4 rounded-xl glass-card border border-slate-800">
+          <div class="text-2xl font-bold font-heading text-amber-400">CMYK/RGB</div>
+          <div class="text-xs text-slate-400">Print & Digital Ready</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Main Interactive Logo Studio Canvas -->
+  <section id="studio-customizer" class="py-16 bg-[#090E1A]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Interactive Studio</span>
+          <h2 class="text-3xl font-bold font-heading text-white mt-1">Live Logo Customizer & Inspector</h2>
+          <p class="text-sm text-slate-400">Customize backgrounds, color accents, scales, and copy instant SVG code</p>
+        </div>
+
+        <!-- Studio Mode Switchers -->
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Background Mode -->
+          <div class="bg-slate-900/90 p-1 rounded-lg border border-slate-800 flex items-center gap-1 text-xs">
+            <span class="px-2 text-slate-400">Canvas:</span>
+            <button onclick="setStudioBackground('dark')" id="bg-btn-dark" class="px-2.5 py-1 rounded bg-amber-500 text-slate-950 font-semibold transition-all">Obsidian</button>
+            <button onclick="setStudioBackground('light')" id="bg-btn-light" class="px-2.5 py-1 rounded text-slate-300 hover:text-white font-semibold transition-all">Pure White</button>
+            <button onclick="setStudioBackground('glass')" id="bg-btn-glass" class="px-2.5 py-1 rounded text-slate-300 hover:text-white font-semibold transition-all">Glass</button>
+            <button onclick="setStudioBackground('photo')" id="bg-btn-photo" class="px-2.5 py-1 rounded text-slate-300 hover:text-white font-semibold transition-all">Travel Photo</button>
+          </div>
+
+          <!-- Color Preset -->
+          <div class="bg-slate-900/90 p-1 rounded-lg border border-slate-800 flex items-center gap-1 text-xs">
+            <span class="px-2 text-slate-400">Palette:</span>
+            <button onclick="setLogoColor('gold')" class="w-6 h-6 rounded-full bg-amber-500 border border-amber-300 ring-2 ring-amber-500/50" title="Imperial Gold"></button>
+            <button onclick="setLogoColor('cyan')" class="w-6 h-6 rounded-full bg-sky-500 border border-sky-300" title="Azure Horizon"></button>
+            <button onclick="setLogoColor('emerald')" class="w-6 h-6 rounded-full bg-emerald-500 border border-emerald-300" title="Emerald Oasis"></button>
+            <button onclick="setLogoColor('silver')" class="w-6 h-6 rounded-full bg-slate-200 border border-white" title="Royal Platinum"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Showcase Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Interactive Preview Box (8 cols) -->
+        <div class="lg:col-span-8 flex flex-col">
+          <div id="studio-canvas-container" class="relative flex-1 min-h-[440px] rounded-2xl border border-slate-800 bg-[#070C18] flex items-center justify-center p-8 overflow-hidden transition-all duration-300 shadow-2xl">
+            
+            <!-- Background Elements -->
+            <div id="canvas-bg-overlay" class="absolute inset-0 pointer-events-none transition-all duration-300">
+              <div class="absolute inset-0 bg-[radial-gradient(#f59e0b10_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
+            </div>
+
+            <!-- Dynamic Image Overlay Background (Hidden by default) -->
+            <div id="canvas-photo-bg" class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-300 pointer-events-none" style="background-image: url('images/hero.jpg');">
+              <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-[2px]"></div>
+            </div>
+
+            <!-- The Main Dynamic SVG Logo -->
+            <div id="studio-logo-wrapper" class="relative z-10 flex flex-col items-center text-center transition-transform duration-300">
+              
+              <!-- Master SVG Graphic -->
+              <svg id="master-svg-logo" class="w-40 h-40 md:w-48 md:h-48 drop-shadow-[0_15px_30px_rgba(245,158,11,0.3)]" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <!-- Gold Gradient -->
+                  <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FDE68A"/>
+                    <stop offset="50%" stop-color="#F59E0B"/>
+                    <stop offset="100%" stop-color="#B45309"/>
+                  </linearGradient>
+                  <!-- Deep Accent Gradient -->
+                  <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#38BDF8"/>
+                    <stop offset="100%" stop-color="#0284C7"/>
+                  </linearGradient>
+                  <!-- Outer Glow Filter -->
+                  <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+
+                <!-- Outer Orbit Rings (Supersonic Flight Track) -->
+                <circle cx="100" cy="100" r="88" stroke="url(#goldGrad1)" stroke-width="2" stroke-dasharray="4 8" opacity="0.6" class="animate-spin-slow origin-center"/>
+                <circle cx="100" cy="100" r="76" stroke="url(#goldGrad1)" stroke-width="1.5" opacity="0.4"/>
+                
+                <!-- 8-Point Compass Rose Coordinates -->
+                <g opacity="0.7">
+                  <path d="M100 8 L103 20 L100 24 L97 20 Z" fill="url(#goldGrad1)"/>
+                  <path d="M100 192 L103 180 L100 176 L97 180 Z" fill="url(#goldGrad1)"/>
+                  <path d="M8 100 L20 103 L24 100 L20 97 Z" fill="url(#goldGrad1)"/>
+                  <path d="M192 100 L180 103 L176 100 L180 97 Z" fill="url(#goldGrad1)"/>
+                </g>
+
+                <!-- Dynamic Supersonic Airplane Arc -->
+                <path d="M30 145 C50 70, 130 50, 175 60" stroke="url(#goldGrad1)" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <!-- Sleek Jet Silhouette at top of arc -->
+                <g transform="translate(170, 58) rotate(35) scale(0.9)">
+                  <path d="M0 -10 L6 6 L0 3 L-6 6 Z" fill="url(#goldGrad1)"/>
+                  <path d="M0 -15 L3 -5 L0 -3 L-3 -5 Z" fill="#FFF"/>
+                </g>
+
+                <!-- Geometric Monogram H & T Core -->
+                <!-- Left Stem of H -->
+                <path d="M60 62 L60 138" stroke="url(#goldGrad1)" stroke-width="11" stroke-linecap="round"/>
+                <!-- Right Stem of H -->
+                <path d="M140 62 L140 138" stroke="url(#goldGrad1)" stroke-width="11" stroke-linecap="round"/>
+                <!-- Crossbar of H combined with T Bar -->
+                <path d="M60 100 L140 100" stroke="url(#goldGrad1)" stroke-width="9" stroke-linecap="round"/>
+                
+                <!-- Central T Vertical Stem overlapping -->
+                <path d="M100 70 L100 138" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity="0.95"/>
+                
+                <!-- Center Diamond Compass Pivot -->
+                <polygon points="100,90 108,100 100,110 92,100" fill="url(#goldGrad1)" filter="url(#goldGlow)"/>
+                <circle cx="100" cy="100" r="3" fill="#FFFFFF"/>
+              </svg>
+
+              <!-- Typographic Lockup -->
+              <div id="studio-logo-text" class="mt-5">
+                <h3 class="font-heading font-black text-2xl sm:text-3xl tracking-[0.2em] text-white uppercase flex items-center justify-center gap-2">
+                  HASSAN <span class="gold-gradient-text font-serif">TRAVELS</span>
+                </h3>
+                <div class="flex items-center justify-center gap-3 mt-1.5">
+                  <span class="h-[1px] w-8 bg-gradient-to-r from-transparent to-amber-500"></span>
+                  <span class="text-[11px] tracking-[0.35em] text-amber-400 uppercase font-semibold">Luxury & Pilgrimage Voyages</span>
+                  <span class="h-[1px] w-8 bg-gradient-to-l from-transparent to-amber-500"></span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Canvas watermark -->
+            <div class="absolute bottom-3 right-4 text-[10px] text-slate-500 font-mono">
+              Scale: 100% | Vector 200x200
+            </div>
+          </div>
+
+          <!-- Bottom Control Bar -->
+          <div class="mt-4 flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-900/60 rounded-xl border border-slate-800 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-slate-400">Scale Preview:</span>
+              <button onclick="setStudioScale(0.75)" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300">75%</button>
+              <button onclick="setStudioScale(1.0)" class="px-2 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">100%</button>
+              <button onclick="setStudioScale(1.35)" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300">135%</button>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <button onclick="copySvgCode()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium flex items-center gap-1.5 border border-slate-700 transition-colors">
+                <i data-lucide="copy" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span id="copy-btn-text">Copy SVG Code</span>
+              </button>
+              <button onclick="downloadSvg('master-svg-logo', 'hassan-travels-primary-logo.svg')" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold flex items-center gap-1.5 transition-colors">
+                <i data-lucide="file-down" class="w-3.5 h-3.5"></i>
+                <span>Download SVG</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spec Sheet & Quick Guide (4 cols) -->
+        <div class="lg:col-span-4 flex flex-col gap-4">
+          
+          <!-- Brand Concept Card -->
+          <div class="p-6 rounded-2xl glass-card border border-slate-800 flex-1">
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Symbolism & Anatomy
+            </div>
+            <h4 class="font-heading font-bold text-white text-lg mb-3">The Golden Celestial Compass</h4>
+            <p class="text-slate-300 text-xs leading-relaxed mb-4">
+              The Hassan Travels logo unites three core elements:
+            </p>
+            
+            <ul class="space-y-3 text-xs text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">1</span>
+                <div>
+                  <strong class="text-white">Interlocking Monogram 'HT':</strong>
+                  Precision engineered geometric pillars symbolizing structural integrity, trust, and VIP stature.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">2</span>
+                <div>
+                  <strong class="text-white">Supersonic Orbital Flight Arc:</strong>
+                  Represents global connectivity, seamless journeys, and worldwide charter reach.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">3</span>
+                <div>
+                  <strong class="text-white">8-Point Star & Compass Coordinates:</strong>
+                  Guiding spiritual pilgrimages (Hajj & Umrah) and bespoke luxury explorations safely.
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-6 pt-4 border-t border-slate-800">
+              <div class="text-[11px] text-slate-400 flex justify-between">
+                <span>Minimum Clear Space:</span>
+                <span class="text-slate-200 font-mono">1.5x Emblem Radius</span>
+              </div>
+              <div class="text-[11px] text-slate-400 flex justify-between mt-1">
+                <span>Minimum Digital Size:</span>
+                <span class="text-slate-200 font-mono">32px × 32px</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Logo Suite & All Variations -->
+  <section id="variations" class="py-16 bg-[#060B18] border-t border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Complete Brand Suite</span>
+        <h2 class="text-3xl font-bold font-heading text-white mt-1">Logo Variations for Every Medium</h2>
+        <p class="text-sm text-slate-400 mt-2">Tailored vector lockups for digital apps, printed collateral, signage, and VIP charters.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Variant 1: Primary Horizontal Lockup -->
+        <div class="p-6 rounded-2xl glass-card border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">01. Primary Lockup</span>
+              <button onclick="downloadSvg('svg-var-1', 'hassan-travels-horizontal.svg')" class="text-slate-400 hover:text-white" title="Download"><i data-lucide="download" class="w-4 h-4"></i></button>
+            </div>
+            
+            <div class="h-44 rounded-xl bg-slate-950/80 border border-slate-800/60 flex items-center justify-center p-4">
+              <!-- SVG 1: Horizontal Lockup -->
+              <svg id="svg-var-1" class="w-full max-w-[220px]" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Mini Emblem -->
+                <g transform="translate(10, 5) scale(0.3)">
+                  <circle cx="100" cy="100" r="88" stroke="#F59E0B" stroke-width="4" stroke-dasharray="8 8" opacity="0.7"/>
+                  <path d="M30 145 C50 70, 130 50, 175 60" stroke="#FDE68A" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M60 62 L60 138" stroke="#F59E0B" stroke-width="14" stroke-linecap="round"/>
+                  <path d="M140 62 L140 138" stroke="#F59E0B" stroke-width="14" stroke-linecap="round"/>
+                  <path d="M60 100 L140 100" stroke="#F59E0B" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M100 70 L100 138" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+                  <polygon points="100,90 110,100 100,110 90,100" fill="#F59E0B"/>
+                </g>
+                <!-- Typography -->
+                <text x="80" y="36" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" letter-spacing="3">HASSAN</text>
+                <text x="175" y="36" fill="#F59E0B" font-family="'Cinzel', serif" font-weight="700" font-size="18" letter-spacing="2">TRAVELS</text>
+                <text x="81" y="52" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7" letter-spacing="2.5">BESPOKE LUXURY JOURNEYS</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h5 class="text-sm font-bold text-white">Horizontal Master Lockup</h5>
+            <p class="text-xs text-slate-400 mt-1">Best suited for website headers, email footers, and official documents.</p>
+          </div>
+        </div>
+
+        <!-- Variant 2: Minimalist Monogram App Icon -->
+        <div class="p-6 rounded-2xl glass-card border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">02. Monogram Icon</span>
+              <button onclick="downloadSvg('svg-var-2', 'hassan-travels-monogram.svg')" class="text-slate-400 hover:text-white" title="Download"><i data-lucide="download" class="w-4 h-4"></i></button>
+            </div>
+            
+            <div class="h-44 rounded-xl bg-slate-950/80 border border-slate-800/60 flex items-center justify-center p-4">
+              <!-- SVG 2: Monogram App Icon -->
+              <svg id="svg-var-2" class="w-24 h-24 drop-shadow-lg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Squircle Background -->
+                <rect x="2" y="2" width="96" height="96" rx="26" fill="url(#appGrad)" stroke="url(#appBorder)" stroke-width="2"/>
+                <defs>
+                  <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1E293B"/>
+                    <stop offset="100%" stop-color="#090D16"/>
+                  </linearGradient>
+                  <linearGradient id="appBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F59E0B"/>
+                    <stop offset="100%" stop-color="#0284C7"/>
+                  </linearGradient>
+                </defs>
+                <!-- Monogram HT -->
+                <path d="M28 28V72" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
+                <path d="M72 28V72" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
+                <path d="M28 50H72" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+                <path d="M50 32V68" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="50" cy="50" r="3.5" fill="#F59E0B"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h5 class="text-sm font-bold text-white">App Icon & Favicon</h5>
+            <p class="text-xs text-slate-400 mt-1">Optimized for mobile app icons, browser favicons, and social avatars.</p>
+          </div>
+        </div>
+
+        <!-- Variant 3: VIP Gold Foil Circular Seal -->
+        <div class="p-6 rounded-2xl glass-card border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">03. VIP Royal Crest</span>
+              <button onclick="downloadSvg('svg-var-3', 'hassan-travels-royal-seal.svg')" class="text-slate-400 hover:text-white" title="Download"><i data-lucide="download" class="w-4 h-4"></i></button>
+            </div>
+            
+            <div class="h-44 rounded-xl bg-slate-950/80 border border-slate-800/60 flex items-center justify-center p-4">
+              <!-- SVG 3: VIP Royal Seal -->
+              <svg id="svg-var-3" class="w-32 h-32" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circular Ribbons -->
+                <circle cx="70" cy="70" r="62" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="3 3"/>
+                <circle cx="70" cy="70" r="54" stroke="#FDE68A" stroke-width="1.5"/>
+                <!-- Decorative Stars -->
+                <polygon points="70,22 72,27 77,27 73,30 75,35 70,32 65,35 67,30 63,27 68,27" fill="#FDE68A"/>
+                <polygon points="40,32 42,36 46,36 43,39 44,43 40,41 36,43 37,39 34,36 38,36" fill="#FDE68A"/>
+                <polygon points="100,32 102,36 106,36 103,39 104,43 100,41 96,43 97,39 94,36 98,36" fill="#FDE68A"/>
+                <!-- Inner HT Monogram -->
+                <path d="M48 50V90" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+                <path d="M92 50V90" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+                <path d="M48 70H92" stroke="#F59E0B" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M70 54V86" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+                <text x="70" y="108" fill="#FDE68A" font-family="'Outfit', sans-serif" font-weight="700" font-size="7" text-anchor="middle" letter-spacing="2">EST. 2026</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h5 class="text-sm font-bold text-white">Royal Gold Foil Seal</h5>
+            <p class="text-xs text-slate-400 mt-1">Used on physical passport holders, embossed VIP itineraries, and wax seals.</p>
+          </div>
+        </div>
+
+        <!-- Variant 4: Clean Corporate Light Version -->
+        <div class="p-6 rounded-2xl glass-card border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">04. Corporate Light</span>
+              <button onclick="downloadSvg('svg-var-4', 'hassan-travels-light-mode.svg')" class="text-slate-400 hover:text-white" title="Download"><i data-lucide="download" class="w-4 h-4"></i></button>
+            </div>
+            
+            <div class="h-44 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-4">
+              <!-- SVG 4: Corporate Light Lockup -->
+              <svg id="svg-var-4" class="w-full max-w-[210px]" viewBox="0 0 240 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(10, 5) scale(0.3)">
+                  <circle cx="100" cy="100" r="88" stroke="#0F172A" stroke-width="4" stroke-dasharray="8 8" opacity="0.7"/>
+                  <path d="M30 145 C50 70, 130 50, 175 60" stroke="#D97706" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M60 62 L60 138" stroke="#0F172A" stroke-width="14" stroke-linecap="round"/>
+                  <path d="M140 62 L140 138" stroke="#0F172A" stroke-width="14" stroke-linecap="round"/>
+                  <path d="M60 100 L140 100" stroke="#0F172A" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M100 70 L100 138" stroke="#D97706" stroke-width="9" stroke-linecap="round"/>
+                </g>
+                <text x="80" y="36" fill="#0F172A" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" letter-spacing="3">HASSAN</text>
+                <text x="175" y="36" fill="#D97706" font-family="'Cinzel', serif" font-weight="700" font-size="18" letter-spacing="2">TRAVELS</text>
+                <text x="81" y="52" fill="#64748B" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7" letter-spacing="2.5">TRAVEL AGENCY</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <h5 class="text-sm font-bold text-white">Light Mode / Print Monolith</h5>
+            <p class="text-xs text-slate-400 mt-1">High-contrast lockup engineered for white paper, invoices, and light UI.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Brand Identity & Design System Specifications -->
+  <section id="palette" class="py-16 bg-[#090E1A] border-t border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Design System</span>
+          <h2 class="text-3xl font-bold font-heading text-white mt-1">Official Color Palette & Typography</h2>
+          <p class="text-sm text-slate-400">Harmonized color tokens and font hierarchies used across Hassan Travels.</p>
+        </div>
+      </div>
+
+      <!-- Colors Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        
+        <!-- Swatch 1: Imperial Gold -->
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer group hover:border-amber-500 transition-all" onclick="copyColor('#F59E0B')">
+          <div class="h-24 rounded-lg bg-[#F59E0B] shadow-inner mb-3 flex items-end p-2 justify-end">
+            <span class="text-[10px] bg-black/40 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+          </div>
+          <div class="font-bold text-white text-xs">Imperial Gold</div>
+          <div class="text-[11px] text-amber-400 font-mono mt-0.5">#F59E0B</div>
+          <div class="text-[10px] text-slate-400 mt-1">Primary Accent</div>
+        </div>
+
+        <!-- Swatch 2: Gold Highlight -->
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer group hover:border-amber-500 transition-all" onclick="copyColor('#FDE68A')">
+          <div class="h-24 rounded-lg bg-[#FDE68A] shadow-inner mb-3 flex items-end p-2 justify-end">
+            <span class="text-[10px] bg-black/40 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+          </div>
+          <div class="font-bold text-white text-xs">Champagne Sun</div>
+          <div class="text-[11px] text-amber-300 font-mono mt-0.5">#FDE68A</div>
+          <div class="text-[10px] text-slate-400 mt-1">Highlight & Shimmer</div>
+        </div>
+
+        <!-- Swatch 3: Midnight Obsidian -->
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer group hover:border-amber-500 transition-all" onclick="copyColor('#060B18')">
+          <div class="h-24 rounded-lg bg-[#060B18] border border-slate-700 shadow-inner mb-3 flex items-end p-2 justify-end">
+            <span class="text-[10px] bg-black/40 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+          </div>
+          <div class="font-bold text-white text-xs">Midnight Obsidian</div>
+          <div class="text-[11px] text-slate-300 font-mono mt-0.5">#060B18</div>
+          <div class="text-[10px] text-slate-400 mt-1">Primary Background</div>
+        </div>
+
+        <!-- Swatch 4: Royal Navy -->
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer group hover:border-amber-500 transition-all" onclick="copyColor('#0F172A')">
+          <div class="h-24 rounded-lg bg-[#0F172A] border border-slate-700 shadow-inner mb-3 flex items-end p-2 justify-end">
+            <span class="text-[10px] bg-black/40 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+          </div>
+          <div class="font-bold text-white text-xs">Royal Navy</div>
+          <div class="text-[11px] text-slate-300 font-mono mt-0.5">#0F172A</div>
+          <div class="text-[10px] text-slate-400 mt-1">Surface & Cards</div>
+        </div>
+
+        <!-- Swatch 5: Azure Horizon -->
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer group hover:border-amber-500 transition-all" onclick="copyColor('#0284C7')">
+          <div class="h-24 rounded-lg bg-[#0284C7] shadow-inner mb-3 flex items-end p-2 justify-end">
+            <span class="text-[10px] bg-black/40 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+          </div>
+          <div class="font-bold text-white text-xs">Azure Horizon</div>
+          <div class="text-[11px] text-sky-400 font-mono mt-0.5">#0284C7</div>
+          <div class="text-[10px] text-slate-400 mt-1">Aviation Accent</div>
+        </div>
+
+        <!-- Swatch 6: Pure Pearl -->
+        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer group hover:border-amber-500 transition-all" onclick="copyColor('#F8FAFC')">
+          <div class="h-24 rounded-lg bg-[#F8FAFC] shadow-inner mb-3 flex items-end p-2 justify-end">
+            <span class="text-[10px] bg-black/40 text-slate-900 px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">Copy</span>
+          </div>
+          <div class="font-bold text-white text-xs">Pure Pearl</div>
+          <div class="text-[11px] text-slate-200 font-mono mt-0.5">#F8FAFC</div>
+          <div class="text-[10px] text-slate-400 mt-1">Light Typography</div>
+        </div>
+
+      </div>
+
+      <!-- Typography Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl glass-card border border-slate-800">
+          <div class="text-xs text-amber-400 uppercase font-bold tracking-wider mb-2">Display Font</div>
+          <div class="text-3xl font-bold font-heading text-white mb-2">Outfit</div>
+          <p class="text-xs text-slate-400 mb-4">Modern geometric sans-serif delivering clean authority and sleek digital luxury.</p>
+          <div class="p-3 bg-slate-950/60 rounded-lg text-sm text-slate-200 font-heading">
+            Aa Bb Cc Dd Ee Ff Gg Hh 0123456789
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card border border-slate-800">
+          <div class="text-xs text-amber-400 uppercase font-bold tracking-wider mb-2">Serif Accent</div>
+          <div class="text-3xl font-bold font-serif text-amber-400 mb-2">Cinzel</div>
+          <p class="text-xs text-slate-400 mb-4">Classical Roman proportions reflecting timeless prestige, royalty, and heritage.</p>
+          <div class="p-3 bg-slate-950/60 rounded-lg text-sm text-amber-300 font-serif">
+            HASSAN TRAVELS VOYAGES
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card border border-slate-800">
+          <div class="text-xs text-amber-400 uppercase font-bold tracking-wider mb-2">Body Text</div>
+          <div class="text-3xl font-bold font-sans text-white mb-2">Plus Jakarta Sans</div>
+          <p class="text-xs text-slate-400 mb-4">Ultra-legible, balanced humanist typography crafted for high-density UI and itineraries.</p>
+          <div class="p-3 bg-slate-950/60 rounded-lg text-sm text-slate-300 font-sans">
+            Crafting bespoke itineraries with 24/7 VIP assistance worldwide.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Real-World 3D Mockup Previews -->
+  <section id="mockups" class="py-16 bg-[#060B18] border-t border-slate-800/80">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Brand Applications</span>
+        <h2 class="text-3xl font-bold font-heading text-white mt-1">Real-World Mockup Previews</h2>
+        <p class="text-sm text-slate-400 mt-2">See how the Hassan Travels brand identity translates across physical luxury assets.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Mockup 1: VIP Passport Wallet -->
+        <div class="rounded-2xl glass-card border border-slate-800 overflow-hidden group hover:border-amber-500/50 transition-all">
+          <div class="h-64 bg-gradient-to-br from-[#1E293B] via-[#0F172A] to-[#020617] p-8 flex items-center justify-center relative overflow-hidden">
+            <!-- Simulated Leather Texture -->
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:8px_8px]"></div>
+            
+            <!-- Passport Holder Card -->
+            <div class="w-48 h-56 rounded-xl bg-gradient-to-b from-slate-900 to-black border-2 border-amber-500/40 shadow-2xl p-4 flex flex-col items-center justify-between transform group-hover:scale-105 group-hover:-rotate-1 transition-transform duration-500">
+              <div class="text-[8px] text-amber-400/80 tracking-[0.3em] font-serif uppercase text-center mt-2">VIP TRAVEL PORTFOLIO</div>
+              
+              <!-- Embossed Gold Crest -->
+              <div class="w-16 h-16 rounded-full border border-amber-400/60 flex items-center justify-center bg-amber-500/10 shadow-lg shadow-amber-500/20">
+                <svg class="w-10 h-10 text-amber-400" viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="50" r="44" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4 4"/>
+                  <path d="M28 28V72M72 28V72M28 50H72" stroke="#FDE68A" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M50 32V68" stroke="#FFF" stroke-width="4"/>
+                </svg>
+              </div>
+
+              <div class="text-center mb-2">
+                <div class="text-xs font-bold text-amber-300 font-heading tracking-widest uppercase">HASSAN TRAVELS</div>
+                <div class="text-[7px] text-slate-400 tracking-wider">FIRST CLASS MEMBER #8849</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5">
+            <h4 class="font-bold text-white text-base">Executive Passport Wallet</h4>
+            <p class="text-xs text-slate-400 mt-1">Embossed gold foil stamped on Italian leather for VIP clientele.</p>
+          </div>
+        </div>
+
+        <!-- Mockup 2: First-Class Boarding Pass -->
+        <div class="rounded-2xl glass-card border border-slate-800 overflow-hidden group hover:border-amber-500/50 transition-all">
+          <div class="h-64 bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-6 flex items-center justify-center relative overflow-hidden">
+            <!-- Boarding Pass Card -->
+            <div class="w-full max-w-[280px] bg-slate-900 rounded-xl border border-amber-500/40 shadow-2xl p-3.5 transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500">
+              
+              <!-- Header -->
+              <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-4 h-4 rounded bg-amber-500 flex items-center justify-center text-slate-950 font-bold text-[8px]">HT</div>
+                  <span class="text-[10px] font-bold text-white font-heading">HASSAN TRAVELS VIP</span>
+                </div>
+                <span class="text-[9px] font-mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded">SUITE 1A</span>
+              </div>
+
+              <!-- Flight Route -->
+              <div class="flex items-center justify-between my-3 text-center">
+                <div>
+                  <div class="text-lg font-bold text-white font-heading">LHR</div>
+                  <div class="text-[8px] text-slate-400">London</div>
+                </div>
+                <div class="flex flex-col items-center">
+                  <i data-lucide="plane-takeoff" class="w-4 h-4 text-amber-400 mb-0.5"></i>
+                  <div class="w-16 h-0.5 bg-gradient-to-r from-amber-500/20 via-amber-400 to-amber-500/20"></div>
+                  <div class="text-[7px] text-slate-400 mt-0.5">HT-770 VIP</div>
+                </div>
+                <div>
+                  <div class="text-lg font-bold text-white font-heading">DXB</div>
+                  <div class="text-[8px] text-slate-400">Dubai</div>
+                </div>
+              </div>
+
+              <!-- Barcode -->
+              <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                <div class="font-mono text-[8px] text-slate-400">MR. HASSAN AHMAD</div>
+                <div class="h-5 w-24 bg-[repeating-linear-gradient(90deg,#F59E0B,#F59E0B_2px,transparent_2px,transparent_4px)]"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="p-5">
+            <h4 class="font-bold text-white text-base">VIP Boarding Pass & Itinerary</h4>
+            <p class="text-xs text-slate-400 mt-1">Digital wallet & physical high-finish boarding card layout.</p>
+          </div>
+        </div>
+
+        <!-- Mockup 3: Private Jet Tail Livery -->
+        <div class="rounded-2xl glass-card border border-slate-800 overflow-hidden group hover:border-amber-500/50 transition-all">
+          <div class="h-64 bg-gradient-to-tr from-slate-950 via-sky-950/40 to-slate-900 p-6 flex items-center justify-center relative overflow-hidden">
+            <!-- Simulated Tail Fin -->
+            <div class="relative w-48 h-48 transform group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+              <svg class="w-full h-full" viewBox="0 0 200 200" fill="none">
+                <!-- Fin Shape -->
+                <path d="M40 180 L140 20 L180 20 L160 180 Z" fill="#0B132B" stroke="#F59E0B" stroke-width="2"/>
+                <!-- Gold Accent Swoosh -->
+                <path d="M70 180 L155 35 L170 35 L120 180 Z" fill="url(#goldGradFin)"/>
+                <defs>
+                  <linearGradient id="goldGradFin" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FDE68A"/>
+                    <stop offset="100%" stop-color="#B45309"/>
+                  </linearGradient>
+                </defs>
+                <!-- Tail Crest -->
+                <circle cx="130" cy="75" r="22" fill="#060B18" stroke="#FDE68A" stroke-width="2"/>
+                <path d="M122 65V85M138 65V85M122 75H138" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                <path d="M130 67V83" stroke="#FFF" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="p-5">
+            <h4 class="font-bold text-white text-base">Private Jet & Charter Livery</h4>
+            <p class="text-xs text-slate-400 mt-1">High-visibility tail fin insignia for executive air charters.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 5: Brand Asset Direct Download & Footer -->
+  <footer class="bg-[#04070F] border-t border-slate-800 text-slate-400 py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center">
+            <svg class="w-5 h-5 text-amber-400" viewBox="0 0 100 100" fill="none">
+              <path d="M25 25V75M75 25V75M25 50H75" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-white font-bold font-heading">HASSAN TRAVELS BRAND STUDIO</div>
+            <div class="text-xs text-slate-500">© 2026 Hassan Travels Inc. All rights reserved.</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button onclick="downloadAllAssets()" class="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition-all">
+            <i data-lucide="package" class="w-4 h-4"></i> Download Full Vector Package (.ZIP)
+          </button>
+          <a href="index.html" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs border border-slate-700 transition-all flex items-center gap-2">
+            <span>Explore Main Website</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="pt-8 text-center text-xs text-slate-500 flex flex-wrap justify-between items-center gap-4">
+        <span>Designed for Hassan Travels luxury travel agency with modern Tailwind CSS and SVG Vector standards.</span>
+        <div class="flex items-center gap-4">
+          <a href="index.html#destinations" class="hover:text-amber-400">Destinations</a>
+          <a href="index.html#packages" class="hover:text-amber-400">Packages</a>
+          <a href="index.html#estimator" class="hover:text-amber-400">Trip Estimator</a>
+          <a href="index.html#contact" class="hover:text-amber-400">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="px-4 py-3 rounded-xl bg-slate-900 border border-amber-500/60 shadow-2xl text-white text-xs flex items-center gap-3">
+      <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+      </div>
+      <span id="toast-message">SVG Code copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Studio Background Changer
+    function setStudioBackground(mode) {
+      const container = document.getElementById('studio-canvas-container');
+      const photoBg = document.getElementById('canvas-photo-bg');
+      const logoWrapper = document.getElementById('studio-logo-wrapper');
+      
+      // Reset button styles
+      ['dark', 'light', 'glass', 'photo'].forEach(m => {
+        const btn = document.getElementById(`bg-btn-${m}`);
+        if (btn) {
+          btn.className = m === mode 
+            ? 'px-2.5 py-1 rounded bg-amber-500 text-slate-950 font-semibold transition-all'
+            : 'px-2.5 py-1 rounded text-slate-300 hover:text-white font-semibold transition-all';
+        }
+      });
+
+      photoBg.style.opacity = '0';
+      container.style.backgroundColor = '#070C18';
+
+      if (mode === 'dark') {
+        container.style.backgroundColor = '#070C18';
+        logoWrapper.querySelector('h3').className = 'font-heading font-black text-2xl sm:text-3xl tracking-[0.2em] text-white uppercase flex items-center justify-center gap-2';
+      } else if (mode === 'light') {
+        container.style.backgroundColor = '#FFFFFF';
+        logoWrapper.querySelector('h3').className = 'font-heading font-black text-2xl sm:text-3xl tracking-[0.2em] text-slate-900 uppercase flex items-center justify-center gap-2';
+      } else if (mode === 'glass') {
+        container.style.backgroundColor = 'rgba(15, 23, 42, 0.6)';
+        container.style.backdropFilter = 'blur(20px)';
+        logoWrapper.querySelector('h3').className = 'font-heading font-black text-2xl sm:text-3xl tracking-[0.2em] text-white uppercase flex items-center justify-center gap-2';
+      } else if (mode === 'photo') {
+        photoBg.style.opacity = '1';
+        logoWrapper.querySelector('h3').className = 'font-heading font-black text-2xl sm:text-3xl tracking-[0.2em] text-white uppercase flex items-center justify-center gap-2';
+      }
+    }
+
+    // Studio Logo Color Preset
+    function setLogoColor(palette) {
+      const grad = document.getElementById('goldGrad1');
+      if (!grad) return;
+
+      if (palette === 'gold') {
+        grad.children[0].setAttribute('stop-color', '#FDE68A');
+        grad.children[1].setAttribute('stop-color', '#F59E0B');
+        grad.children[2].setAttribute('stop-color', '#B45309');
+        showToast("Palette updated: Imperial Gold");
+      } else if (palette === 'cyan') {
+        grad.children[0].setAttribute('stop-color', '#BAE6FD');
+        grad.children[1].setAttribute('stop-color', '#0284C7');
+        grad.children[2].setAttribute('stop-color', '#0369A1');
+        showToast("Palette updated: Azure Horizon");
+      } else if (palette === 'emerald') {
+        grad.children[0].setAttribute('stop-color', '#A7F3D0');
+        grad.children[1].setAttribute('stop-color', '#059669');
+        grad.children[2].setAttribute('stop-color', '#047857');
+        showToast("Palette updated: Emerald Oasis");
+      } else if (palette === 'silver') {
+        grad.children[0].setAttribute('stop-color', '#FFFFFF');
+        grad.children[1].setAttribute('stop-color', '#CBD5E1');
+        grad.children[2].setAttribute('stop-color', '#64748B');
+        showToast("Palette updated: Royal Platinum");
+      }
+    }
+
+    // Studio Scale Previewer
+    function setStudioScale(scale) {
+      const wrapper = document.getElementById('studio-logo-wrapper');
+      wrapper.style.transform = `scale(${scale})`;
+      showToast(`Scale set to ${Math.round(scale * 100)}%`);
+    }
+
+    // Copy SVG Code
+    function copySvgCode() {
+      const svg = document.getElementById('master-svg-logo');
+      const serializer = new XMLSerializer();
+      const svgStr = serializer.serializeToString(svg);
+      
+      navigator.clipboard.writeText(svgStr).then(() => {
+        showToast("✅ SVG Vector code copied to clipboard!");
+      }).catch(() => {
+        showToast("Failed to copy code.");
+      });
+    }
+
+    // Download Single SVG
+    function downloadSvg(svgId, filename) {
+      const svg = document.getElementById(svgId);
+      if (!svg) return;
+      const serializer = new XMLSerializer();
+      const svgStr = serializer.serializeToString(svg);
+      const blob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast(`Downloaded ${filename}`);
+    }
+
+    // Copy Color Hex
+    function copyColor(hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        showToast(`Copied ${hex} to clipboard!`);
+      });
+    }
+
+    // Download All Assets Pack
+    function downloadAllAssets() {
+      ['master-svg-logo', 'svg-var-1', 'svg-var-2', 'svg-var-3', 'svg-var-4'].forEach((id, i) => {
+        setTimeout(() => {
+          downloadSvg(id, `hassan-travels-asset-${i+1}.svg`);
+        }, i * 300);
+      });
+      showToast("Downloading all vector SVG files...");
+    }
+
+    // Toast Notification Utility
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.innerText = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
+
