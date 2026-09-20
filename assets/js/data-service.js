@@ -317,6 +317,9 @@
             sessionStorage.setItem('ht_admin_user', JSON.stringify(data.user));
             return { success: true, user: data.user, token: data.token };
           }
+          if (res.status === 500) {
+            throw new Error('Server error, falling back to local storage');
+          }
           return { success: false, error: data.error || 'Invalid credentials' };
         } catch (e) {
           console.warn('API login failed, falling back to local storage auth:', e);
