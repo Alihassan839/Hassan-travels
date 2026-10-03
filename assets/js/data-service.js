@@ -256,12 +256,16 @@
     }
   }
 
+  function triggerSync(key) {
+    if (syncChannel) {
+      syncChannel.postMessage({ type: 'DATA_UPDATED', key, timestamp: Date.now() });
+    }
+  }
+
   function setLocal(key, val) {
     try {
       localStorage.setItem(STORAGE_KEY_PREFIX + key, JSON.stringify(val));
-      if (syncChannel) {
-        syncChannel.postMessage({ type: 'DATA_UPDATED', key, timestamp: Date.now() });
-      }
+      triggerSync(key);
     } catch (e) {
       console.error('LocalStorage write error:', e);
     }
@@ -437,6 +441,7 @@
           });
           if (res.ok) {
             const data = await res.json();
+            triggerSync('bookings'); // Notify admin panel to refresh
             return { success: true, bookingId: data.bookingId };
           }
         } catch (e) {}
