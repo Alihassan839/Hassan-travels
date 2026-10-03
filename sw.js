@@ -1,4 +1,4 @@
-const CACHE_NAME = "hassan-travels-v1";
+const CACHE_NAME = "hassan-travels-v3";
 const urlsToCache = [
   "/",
   "/index.html",
@@ -16,6 +16,9 @@ self.addEventListener("install", event => {
 });
 
 self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET") {
+    return; // Let the browser handle non-GET requests directly
+  }
   event.respondWith(
     caches.match(event.request).then(response => {
       return response || fetch(event.request);
