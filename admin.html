@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | Hassan Travels</title>
     
+    <!-- PWA Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#020617">
+    <link rel="apple-touch-icon" href="/images/icon.svg">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -868,6 +872,17 @@
                     <textarea id="dest-highlights" rows="3" placeholder="5 to 7 Days Packages&#10;Luxury & Standard Hotels&#10;Dedicated 4x4 Transport" class="w-full bg-dark-300 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none"></textarea>
                 </div>
 
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-1.5">History</label>
+                        <input type="text" id="dest-history" placeholder="e.g. Ancient princely state" class="w-full bg-dark-300 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase font-bold text-slate-400 mb-1.5">Distance</label>
+                        <input type="text" id="dest-distance" placeholder="e.g. 600 km from Islamabad" class="w-full bg-dark-300 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:border-brand-500 focus:outline-none">
+                    </div>
+                </div>
+
                 <div class="flex justify-end gap-3 pt-3 border-t border-slate-800">
                     <button type="button" onclick="closeDestinationModal()" class="px-4 py-2.5 rounded-xl bg-dark-100 hover:bg-slate-700 text-slate-300 text-xs font-semibold">
                         Cancel
@@ -1461,6 +1476,8 @@
             document.getElementById('dest-image').value = 'images/hunza.jpg';
             document.getElementById('dest-description').value = '';
             document.getElementById('dest-highlights').value = '5 to 7 Days Packages\nLuxury & Standard Hotels\nDedicated 4x4 Transport';
+            document.getElementById('dest-history').value = '';
+            document.getElementById('dest-distance').value = '';
 
             const modal = document.getElementById('destination-modal');
             modal.classList.remove('hidden');
@@ -1481,6 +1498,8 @@
             document.getElementById('dest-image').value = d.image || '';
             document.getElementById('dest-description').value = d.description || '';
             document.getElementById('dest-highlights').value = d.highlights || '';
+            document.getElementById('dest-history').value = d.history || '';
+            document.getElementById('dest-distance').value = d.distance || '';
 
             const modal = document.getElementById('destination-modal');
             modal.classList.remove('hidden');
@@ -1505,6 +1524,8 @@
                 image: document.getElementById('dest-image').value.trim(),
                 description: document.getElementById('dest-description').value.trim(),
                 highlights: document.getElementById('dest-highlights').value.trim(),
+                history: document.getElementById('dest-history').value.trim(),
+                distance: document.getElementById('dest-distance').value.trim(),
                 is_popular: 1
             };
             if (id) destData.id = Number(id);
@@ -1776,6 +1797,19 @@
                 showToast('All data has been reset to factory defaults.');
                 switchTab('dashboard');
             }
+        }
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
         }
     </script>
 </body>

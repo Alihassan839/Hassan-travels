@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hassan Travels | Luxury Pakistan Journeys & Pilgrimage</title>
   
+  <!-- PWA Tags -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#020617">
+  <link rel="apple-touch-icon" href="/images/icon.svg">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +82,7 @@
     }
     .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); }
+    .glow-text { text-shadow: 0 0 10px rgba(45, 212, 191, 0.5), 0 0 20px rgba(45, 212, 191, 0.3); }
   </style>
 </head>
 <body class="font-sans antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
@@ -99,6 +104,7 @@
         <a href="#destinations" class="hover:text-brand-400 transition-colors">Destinations</a>
         <a href="#experiences" class="hover:text-brand-400 transition-colors">Experiences</a>
         <a href="#tours" class="hover:text-brand-400 transition-colors">Tours</a>
+        <a href="#hotels" class="hover:text-brand-400 transition-colors text-brand-400 font-bold glow-text">Stays</a>
         <a href="#umrah" class="hover:text-brand-400 transition-colors">Hajj & Umrah</a>
         <a href="#blog" class="hover:text-brand-400 transition-colors">Blog</a>
       </div>
@@ -126,6 +132,7 @@
       <a href="#destinations" class="mobile-link py-2 border-b border-slate-800/50">Destinations</a>
       <a href="#experiences" class="mobile-link py-2 border-b border-slate-800/50">Experiences</a>
       <a href="#tours" class="mobile-link py-2 border-b border-slate-800/50">Tours</a>
+      <a href="#hotels" class="mobile-link py-2 border-b border-slate-800/50 text-brand-400 font-bold">Premium Stays</a>
       <a href="#umrah" class="mobile-link py-2 border-b border-slate-800/50">Hajj & Umrah</a>
       <a href="#blog" class="mobile-link py-2 border-b border-slate-800/50">Blog</a>
       <a href="admin.html" class="mobile-link text-brand-400 font-bold flex items-center gap-2 py-3 mt-2 border-t border-slate-800">
@@ -291,6 +298,190 @@
       <!-- Dynamic Tours Container -->
       <div id="tours-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <!-- Rendered dynamically from DataService -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Stays -->
+  <section id="hotels" class="py-14 sm:py-20 md:py-24 bg-dark-300 border-t border-slate-800 relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-10 sm:mb-14 gap-6">
+        <div>
+          <div class="flex items-center gap-3 mb-2 sm:mb-3">
+            <div class="h-[1px] w-8 bg-brand-400 shadow-[0_0_10px_rgba(45,212,191,0.5)]"></div>
+            <span class="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-brand-400 uppercase drop-shadow-md">Premium Stays</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mb-2 sm:mb-4">Luxury Accommodations</h2>
+          <p class="text-xs sm:text-sm md:text-base text-slate-400 max-w-2xl">Experience world-class hospitality, breathtaking mountain views, and unparalleled comfort in Northern Pakistan's most exquisite hotels and resorts.</p>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Hotel 1 -->
+        <div class="glass-card rounded-3xl overflow-hidden hover-lift group border border-slate-700/50 hover:border-brand-500/30">
+          <div class="relative h-64 sm:h-72">
+            <img src="images/hunza.jpg" alt="Hunza Serena" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-300 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute top-4 right-4 bg-dark-300/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 border border-slate-700 shadow-lg">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-brand-400 fill-brand-400 drop-shadow-md"></i>
+              <span class="text-xs font-bold text-white">5.0</span>
+            </div>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5 drop-shadow-lg">Hunza Serena Inn</h3>
+              <p class="text-[11px] sm:text-xs text-brand-400 font-semibold flex items-center gap-1.5 drop-shadow-md"><i data-lucide="map-pin" class="w-3 h-3"></i> Karimabad, Hunza</p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 bg-gradient-to-b from-transparent to-dark-200/50">
+            <p class="text-xs text-slate-400 mb-5 line-clamp-2 leading-relaxed">Overlooking the majestic Rakaposhi mountain, offering unparalleled luxury and traditional heritage.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="wifi" class="w-3.5 h-3.5 text-brand-500/70"></i> Free WiFi</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="coffee" class="w-3.5 h-3.5 text-brand-500/70"></i> Breakfast</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="mountain" class="w-3.5 h-3.5 text-brand-500/70"></i> Mountain View</span>
+            </div>
+            <button onclick="openBookingModal('Hunza Serena Inn')" class="w-full py-3 bg-transparent hover:bg-brand-500 hover:text-dark-300 text-brand-400 border border-brand-500/50 hover:border-brand-500 font-bold rounded-xl transition-all text-xs sm:text-sm shadow-[0_0_15px_rgba(45,212,191,0.1)] hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+              Check Availability
+            </button>
+          </div>
+        </div>
+        
+        <!-- Hotel 2 -->
+        <div class="glass-card rounded-3xl overflow-hidden hover-lift group border border-slate-700/50 hover:border-brand-500/30">
+          <div class="relative h-64 sm:h-72">
+            <img src="images/skardu.jpg" alt="Shangrila Resort" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-300 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute top-4 right-4 bg-dark-300/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 border border-slate-700 shadow-lg">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-brand-400 fill-brand-400 drop-shadow-md"></i>
+              <span class="text-xs font-bold text-white">4.9</span>
+            </div>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5 drop-shadow-lg">Shangrila Resort</h3>
+              <p class="text-[11px] sm:text-xs text-brand-400 font-semibold flex items-center gap-1.5 drop-shadow-md"><i data-lucide="map-pin" class="w-3 h-3"></i> Kachura, Skardu</p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 bg-gradient-to-b from-transparent to-dark-200/50">
+            <p class="text-xs text-slate-400 mb-5 line-clamp-2 leading-relaxed">Known as the "Heaven on Earth," nestled beautifully around the heart-shaped lower Kachura lake.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="waves" class="w-3.5 h-3.5 text-brand-500/70"></i> Lakefront</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="utensils" class="w-3.5 h-3.5 text-brand-500/70"></i> Fine Dining</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="car" class="w-3.5 h-3.5 text-brand-500/70"></i> Airport Transfer</span>
+            </div>
+            <button onclick="openBookingModal('Shangrila Resort')" class="w-full py-3 bg-transparent hover:bg-brand-500 hover:text-dark-300 text-brand-400 border border-brand-500/50 hover:border-brand-500 font-bold rounded-xl transition-all text-xs sm:text-sm shadow-[0_0_15px_rgba(45,212,191,0.1)] hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+              Check Availability
+            </button>
+          </div>
+        </div>
+
+        <!-- Hotel 3 -->
+        <div class="glass-card rounded-3xl overflow-hidden hover-lift group border border-slate-700/50 hover:border-brand-500/30">
+          <div class="relative h-64 sm:h-72">
+            <img src="images/swat.jpg" alt="PC Malam Jabba" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-300 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute top-4 right-4 bg-dark-300/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 border border-slate-700 shadow-lg">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-brand-400 fill-brand-400 drop-shadow-md"></i>
+              <span class="text-xs font-bold text-white">4.8</span>
+            </div>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5 drop-shadow-lg">PC Malam Jabba</h3>
+              <p class="text-[11px] sm:text-xs text-brand-400 font-semibold flex items-center gap-1.5 drop-shadow-md"><i data-lucide="map-pin" class="w-3 h-3"></i> Swat Valley</p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 bg-gradient-to-b from-transparent to-dark-200/50">
+            <p class="text-xs text-slate-400 mb-5 line-clamp-2 leading-relaxed">A luxurious ski resort offering winter sports, thrilling zip lines, and panoramic views of the Hindu Kush.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="snowflake" class="w-3.5 h-3.5 text-brand-500/70"></i> Ski Resort</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="flame" class="w-3.5 h-3.5 text-brand-500/70"></i> Spa & Sauna</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="concierge-bell" class="w-3.5 h-3.5 text-brand-500/70"></i> Room Service</span>
+            </div>
+            <button onclick="openBookingModal('PC Malam Jabba')" class="w-full py-3 bg-transparent hover:bg-brand-500 hover:text-dark-300 text-brand-400 border border-brand-500/50 hover:border-brand-500 font-bold rounded-xl transition-all text-xs sm:text-sm shadow-[0_0_15px_rgba(45,212,191,0.1)] hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+              Check Availability
+            </button>
+          </div>
+        </div>
+
+        <!-- Hotel 4 -->
+        <div class="glass-card rounded-3xl overflow-hidden hover-lift group border border-slate-700/50 hover:border-brand-500/30">
+          <div class="relative h-64 sm:h-72">
+            <img src="images/naran.jpg" alt="Pine Park Resort" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-300 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute top-4 right-4 bg-dark-300/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 border border-slate-700 shadow-lg">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-brand-400 fill-brand-400 drop-shadow-md"></i>
+              <span class="text-xs font-bold text-white">4.7</span>
+            </div>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5 drop-shadow-lg">Pine Park Resort</h3>
+              <p class="text-[11px] sm:text-xs text-brand-400 font-semibold flex items-center gap-1.5 drop-shadow-md"><i data-lucide="map-pin" class="w-3 h-3"></i> Naran Valley</p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 bg-gradient-to-b from-transparent to-dark-200/50">
+            <p class="text-xs text-slate-400 mb-5 line-clamp-2 leading-relaxed">A serene riverside escape surrounded by lush pine forests, offering premium wooden cottages.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="trees" class="w-3.5 h-3.5 text-brand-500/70"></i> Forest View</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="waves" class="w-3.5 h-3.5 text-brand-500/70"></i> Riverside</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="flame" class="w-3.5 h-3.5 text-brand-500/70"></i> Bonfire</span>
+            </div>
+            <button onclick="openBookingModal('Pine Park Resort')" class="w-full py-3 bg-transparent hover:bg-brand-500 hover:text-dark-300 text-brand-400 border border-brand-500/50 hover:border-brand-500 font-bold rounded-xl transition-all text-xs sm:text-sm shadow-[0_0_15px_rgba(45,212,191,0.1)] hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+              Check Availability
+            </button>
+          </div>
+        </div>
+
+        <!-- Hotel 5 -->
+        <div class="glass-card rounded-3xl overflow-hidden hover-lift group border border-slate-700/50 hover:border-brand-500/30">
+          <div class="relative h-64 sm:h-72">
+            <img src="images/fairy_meadows.jpg" alt="Raikot Sarai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-300 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute top-4 right-4 bg-dark-300/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 border border-slate-700 shadow-lg">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-brand-400 fill-brand-400 drop-shadow-md"></i>
+              <span class="text-xs font-bold text-white">4.8</span>
+            </div>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5 drop-shadow-lg">Raikot Sarai</h3>
+              <p class="text-[11px] sm:text-xs text-brand-400 font-semibold flex items-center gap-1.5 drop-shadow-md"><i data-lucide="map-pin" class="w-3 h-3"></i> Fairy Meadows</p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 bg-gradient-to-b from-transparent to-dark-200/50">
+            <p class="text-xs text-slate-400 mb-5 line-clamp-2 leading-relaxed">The premier eco-resort at the base camp of Nanga Parbat, offering cozy wooden log cabins.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="tent" class="w-3.5 h-3.5 text-brand-500/70"></i> Log Cabins</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="mountain" class="w-3.5 h-3.5 text-brand-500/70"></i> Nanga Parbat View</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="coffee" class="w-3.5 h-3.5 text-brand-500/70"></i> Organic Food</span>
+            </div>
+            <button onclick="openBookingModal('Raikot Sarai')" class="w-full py-3 bg-transparent hover:bg-brand-500 hover:text-dark-300 text-brand-400 border border-brand-500/50 hover:border-brand-500 font-bold rounded-xl transition-all text-xs sm:text-sm shadow-[0_0_15px_rgba(45,212,191,0.1)] hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+              Check Availability
+            </button>
+          </div>
+        </div>
+
+        <!-- Hotel 6 -->
+        <div class="glass-card rounded-3xl overflow-hidden hover-lift group border border-slate-700/50 hover:border-brand-500/30">
+          <div class="relative h-64 sm:h-72">
+            <img src="images/neelum.jpg" alt="Green Village Resort" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-300 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute top-4 right-4 bg-dark-300/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 border border-slate-700 shadow-lg">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-brand-400 fill-brand-400 drop-shadow-md"></i>
+              <span class="text-xs font-bold text-white">4.7</span>
+            </div>
+            <div class="absolute bottom-4 left-5 right-5">
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5 drop-shadow-lg">Green Village Resort</h3>
+              <p class="text-[11px] sm:text-xs text-brand-400 font-semibold flex items-center gap-1.5 drop-shadow-md"><i data-lucide="map-pin" class="w-3 h-3"></i> Upper Neelum</p>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 bg-gradient-to-b from-transparent to-dark-200/50">
+            <p class="text-xs text-slate-400 mb-5 line-clamp-2 leading-relaxed">Perched high above the valley with sweeping panoramic views of the Neelum river and Kashmir mountains.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="eye" class="w-3.5 h-3.5 text-brand-500/70"></i> Panoramic View</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="car" class="w-3.5 h-3.5 text-brand-500/70"></i> Secure Parking</span>
+              <span class="text-[10px] px-2.5 py-1.5 bg-dark-100 border border-slate-700 rounded-lg text-slate-300 flex items-center gap-1.5"><i data-lucide="utensils" class="w-3.5 h-3.5 text-brand-500/70"></i> Local Cuisine</span>
+            </div>
+            <button onclick="openBookingModal('Green Village Resort')" class="w-full py-3 bg-transparent hover:bg-brand-500 hover:text-dark-300 text-brand-400 border border-brand-500/50 hover:border-brand-500 font-bold rounded-xl transition-all text-xs sm:text-sm shadow-[0_0_15px_rgba(45,212,191,0.1)] hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+              Check Availability
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -730,6 +921,8 @@
               </div>
               <div class="hidden mt-3 px-1 text-xs text-slate-300 tour-details pb-2 transition-all">
                 <p class="mb-2 text-xs text-slate-300 leading-relaxed">${d.description || 'Experience the natural wonders of Pakistan.'}</p>
+                ${d.history ? `<p class="mb-2 text-xs text-slate-300 leading-relaxed"><strong class="text-white">History:</strong> ${d.history}</p>` : ''}
+                ${d.distance ? `<p class="mb-2 text-xs text-slate-300 leading-relaxed"><strong class="text-white">Distance:</strong> ${d.distance}</p>` : ''}
                 ${highlightsList ? `<ul class="text-xs space-y-1 text-slate-400">${highlightsList}</ul>` : ''}
               </div>
             </div>
@@ -899,6 +1092,19 @@
         lucide.createIcons();
       }
     });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
   </script>
 </body>
 </html>

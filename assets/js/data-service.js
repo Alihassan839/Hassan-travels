@@ -64,6 +64,8 @@
         image: 'images/hunza.jpg',
         description: 'Experience the breathtaking views of the Karakoram peaks. Best time to visit is from April to October.',
         highlights: '5 to 7 Days Packages\nLuxury & Standard Hotels\nDedicated 4x4 Transport',
+        history: 'An ancient princely state that survived for over 900 years, known for its longevity myths and Silk Road heritage.',
+        distance: '600 km from Islamabad',
         is_popular: true,
         sort_order: 1
       },
@@ -76,6 +78,8 @@
         image: 'images/skardu.jpg',
         description: 'Explore the cold desert, Shangrila lake, and Deosai plains. Perfect for adventure lovers.',
         highlights: 'Direct Flights from Islamabad\nLakefront Resorts available\nPrivate Jeeps for Deosai',
+        history: 'A historic gateway to the 8,000-meter peaks, once part of the Tibetan Empire.',
+        distance: '630 km from Islamabad (1 hr flight)',
         is_popular: true,
         sort_order: 2
       },
@@ -88,6 +92,8 @@
         image: 'images/naran.jpg',
         description: 'The ultimate family getaway to Lake Saif ul Malook, Babusar Top, and Lulusar Lake.',
         highlights: '3 to 5 Days Itineraries\nFamily Suite Accommodations\nRafting & Trekking options',
+        history: 'Historically a major route for merchants and travelers heading to Gilgit.',
+        distance: '280 km from Islamabad',
         is_popular: true,
         sort_order: 3
       },
@@ -100,6 +106,8 @@
         image: 'images/swat.jpg',
         description: 'The Switzerland of the East. Enjoy the lush green valleys of Kalam, Malam Jabba, and Mahodand Lake.',
         highlights: '4 Days / 3 Nights Packages\nSkiing in Malam Jabba (Winter)\nRiverside Camping available',
+        history: 'A major center of early Buddhism, later ruled by various dynasties including the Ghaznavids.',
+        distance: '250 km from Islamabad',
         is_popular: true,
         sort_order: 4
       },
@@ -112,6 +120,8 @@
         image: 'images/fairy_meadows.jpg',
         description: 'A majestic trek to the base camp of Nanga Parbat, the 9th highest mountain in the world.',
         highlights: '5 Days Adventure Trek\nWooden Cabins & Camping\nJeep Safari & Trekking Guide',
+        history: 'Named "Märchenwiese" (Fairy Tale Meadows) by German climbers in the 1930s.',
+        distance: '400 km from Islamabad',
         is_popular: true,
         sort_order: 5
       },
@@ -124,6 +134,8 @@
         image: 'images/neelum.jpg',
         description: 'Crystal-clear rivers, lush green mountains, and wooden villages of Kashmir.',
         highlights: 'Arang Kel Cable Car\nSharda University Ruins\nRiverside Resorts',
+        history: 'A valley rich in Kashmiri culture, historically a major center of learning in ancient India.',
+        distance: '240 km from Islamabad',
         is_popular: true,
         sort_order: 6
       }

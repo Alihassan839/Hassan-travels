@@ -56,6 +56,8 @@ async function initDatabaseTables() {
             image TEXT NOT NULL,
             description TEXT,
             highlights TEXT,
+            history TEXT,
+            distance TEXT,
             is_popular INTEGER DEFAULT 1,
             sort_order INTEGER DEFAULT 0,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -115,15 +117,15 @@ async function seedInitialData() {
         const destRes = await pool.query(`SELECT COUNT(*) as count FROM destinations`);
         if (parseInt(destRes.rows[0].count) === 0) {
             const dests = [
-                ['Hunza Valley', 'Gilgit-Baltistan', 4.9, 45000, 'images/hunza.jpg', 'Experience the breathtaking views of the Karakoram peaks. Best time to visit is from April to October.', '5 to 7 Days Packages\nLuxury & Standard Hotels\nDedicated 4x4 Transport', 1, 1],
-                ['Skardu', 'Gilgit-Baltistan', 4.8, 55000, 'images/skardu.jpg', 'Explore the cold desert, Shangrila lake, and Deosai plains. Perfect for adventure lovers.', 'Direct Flights from Islamabad\nLakefront Resorts available\nPrivate Jeeps for Deosai', 1, 2],
-                ['Naran Kaghan', 'Khyber Pakhtunkhwa', 4.7, 35000, 'images/naran.jpg', 'The ultimate family getaway to Lake Saif ul Malook, Babusar Top, and Lulusar Lake.', '3 to 5 Days Itineraries\nFamily Suite Accommodations\nRafting & Trekking options', 1, 3],
-                ['Swat Valley', 'Khyber Pakhtunkhwa', 4.9, 38000, 'images/swat.jpg', 'The Switzerland of the East. Enjoy the lush green valleys of Kalam, Malam Jabba, and Mahodand Lake.', '4 Days / 3 Nights Packages\nSkiing in Malam Jabba (Winter)\nRiverside Camping available', 1, 4],
-                ['Fairy Meadows', 'Diamer District', 4.9, 42000, 'images/fairy_meadows.jpg', 'A majestic trek to the base camp of Nanga Parbat, the 9th highest mountain in the world.', '5 Days Adventure Trek\nWooden Cabins & Camping\nJeep Safari & Trekking Guide', 1, 5],
-                ['Neelum Valley', 'Azad Kashmir', 4.8, 40000, 'images/neelum.jpg', 'Crystal-clear rivers, lush green mountains, and wooden villages of Kashmir.', 'Arang Kel Cable Car\nSharda University Ruins\nRiverside Resorts', 1, 6]
+                ['Hunza Valley', 'Gilgit-Baltistan', 4.9, 45000, 'images/hunza.jpg', 'Experience the breathtaking views of the Karakoram peaks. Best time to visit is from April to October.', '5 to 7 Days Packages\nLuxury & Standard Hotels\nDedicated 4x4 Transport', 'An ancient princely state that survived for over 900 years, known for its longevity myths and Silk Road heritage.', '600 km from Islamabad', 1, 1],
+                ['Skardu', 'Gilgit-Baltistan', 4.8, 55000, 'images/skardu.jpg', 'Explore the cold desert, Shangrila lake, and Deosai plains. Perfect for adventure lovers.', 'Direct Flights from Islamabad\nLakefront Resorts available\nPrivate Jeeps for Deosai', 'A historic gateway to the 8,000-meter peaks, once part of the Tibetan Empire.', '630 km from Islamabad (1 hr flight)', 1, 2],
+                ['Naran Kaghan', 'Khyber Pakhtunkhwa', 4.7, 35000, 'images/naran.jpg', 'The ultimate family getaway to Lake Saif ul Malook, Babusar Top, and Lulusar Lake.', '3 to 5 Days Itineraries\nFamily Suite Accommodations\nRafting & Trekking options', 'Historically a major route for merchants and travelers heading to Gilgit.', '280 km from Islamabad', 1, 3],
+                ['Swat Valley', 'Khyber Pakhtunkhwa', 4.9, 38000, 'images/swat.jpg', 'The Switzerland of the East. Enjoy the lush green valleys of Kalam, Malam Jabba, and Mahodand Lake.', '4 Days / 3 Nights Packages\nSkiing in Malam Jabba (Winter)\nRiverside Camping available', 'A major center of early Buddhism, later ruled by various dynasties including the Ghaznavids.', '250 km from Islamabad', 1, 4],
+                ['Fairy Meadows', 'Diamer District', 4.9, 42000, 'images/fairy_meadows.jpg', 'A majestic trek to the base camp of Nanga Parbat, the 9th highest mountain in the world.', '5 Days Adventure Trek\nWooden Cabins & Camping\nJeep Safari & Trekking Guide', 'Named "Märchenwiese" (Fairy Tale Meadows) by German climbers in the 1930s.', '400 km from Islamabad', 1, 5],
+                ['Neelum Valley', 'Azad Kashmir', 4.8, 40000, 'images/neelum.jpg', 'Crystal-clear rivers, lush green mountains, and wooden villages of Kashmir.', 'Arang Kel Cable Car\nSharda University Ruins\nRiverside Resorts', 'A valley rich in Kashmiri culture, historically a major center of learning in ancient India.', '240 km from Islamabad', 1, 6]
             ];
             for (const d of dests) {
-                await pool.query(`INSERT INTO destinations (name, region, rating, price, image, description, highlights, is_popular, sort_order) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`, d);
+                await pool.query(`INSERT INTO destinations (name, region, rating, price, image, description, highlights, history, distance, is_popular, sort_order) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`, d);
             }
             console.log('Default destinations seeded.');
         }
@@ -394,9 +396,9 @@ app.get('/api/destinations', async (req, res) => {
 
 app.post('/api/destinations', async (req, res) => {
     try {
-        const { name, region, rating, price, image, description, highlights, is_popular, sort_order } = req.body;
-        const sql = `INSERT INTO destinations (name, region, rating, price, image, description, highlights, is_popular, sort_order) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id`;
-        const params = [name, region, rating || 4.8, price || 40000, image || 'images/hunza.jpg', description || '', highlights || '', is_popular ? 1 : 0, sort_order || 0];
+        const { name, region, rating, price, image, description, highlights, history, distance, is_popular, sort_order } = req.body;
+        const sql = `INSERT INTO destinations (name, region, rating, price, image, description, highlights, history, distance, is_popular, sort_order) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING id`;
+        const params = [name, region, rating || 4.8, price || 40000, image || 'images/hunza.jpg', description || '', highlights || '', history || '', distance || '', is_popular ? 1 : 0, sort_order || 0];
 
         const result = await pool.query(sql, params);
         res.status(201).json({ success: true, id: result.rows[0].id });
@@ -407,9 +409,9 @@ app.post('/api/destinations', async (req, res) => {
 
 app.put('/api/destinations/:id', async (req, res) => {
     try {
-        const { name, region, rating, price, image, description, highlights, is_popular, sort_order } = req.body;
-        const sql = `UPDATE destinations SET name = $1, region = $2, rating = $3, price = $4, image = $5, description = $6, highlights = $7, is_popular = $8, sort_order = $9 WHERE id = $10`;
-        const params = [name, region, rating, price, image, description, highlights, is_popular ? 1 : 0, sort_order || 0, req.params.id];
+        const { name, region, rating, price, image, description, highlights, history, distance, is_popular, sort_order } = req.body;
+        const sql = `UPDATE destinations SET name = $1, region = $2, rating = $3, price = $4, image = $5, description = $6, highlights = $7, history = $8, distance = $9, is_popular = $10, sort_order = $11 WHERE id = $12`;
+        const params = [name, region, rating, price, image, description, highlights, history || '', distance || '', is_popular ? 1 : 0, sort_order || 0, req.params.id];
 
         const result = await pool.query(sql, params);
         res.json({ success: true, changes: result.rowCount });

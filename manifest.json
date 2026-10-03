@@ -1,0 +1,17 @@
+{
+  "name": "Hassan Travels",
+  "short_name": "HassanTravels",
+  "description": "Discover the most beautiful travel destinations in Northern Pakistan.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#2DD4BF",
+  "icons": [
+    {
+      "src": "/images/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
