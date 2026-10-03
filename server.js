@@ -2,6 +2,26 @@ const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
+
+// Auto-load .env file if present
+const envFile = path.join(__dirname, '.env');
+if (fs.existsSync(envFile)) {
+    const envLines = fs.readFileSync(envFile, 'utf-8').split(/\r?\n/);
+    for (const line of envLines) {
+        const trimmed = line.trim();
+        if (trimmed && !trimmed.startsWith('#')) {
+            const eqIdx = trimmed.indexOf('=');
+            if (eqIdx > 0) {
+                const key = trimmed.slice(0, eqIdx).trim();
+                const val = trimmed.slice(eqIdx + 1).trim().replace(/^['"]|['"]$/g, '');
+                if (!process.env[key]) {
+                    process.env[key] = val;
+                }
+            }
+        }
+    }
+}
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,17 +31,31 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/')));
 
+// Database Connection URI Helper (handles special characters in password like '@')
+function getDbConnectionString() {
+    let url = process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/hassan_travels';
+    const match = url.match(/^postgresql:\/\/([^:]+):(.+)@([^@]+:\d+\/.*)$/);
+    if (match) {
+        const [, user, pass, rest] = match;
+        url = `postgresql://${user}:${encodeURIComponent(decodeURIComponent(pass))}@${rest}`;
+    }
+    return url;
+}
+
+const dbUrl = getDbConnectionString();
+const isRemoteDb = dbUrl.includes('supabase.co') || dbUrl.includes('.com') || dbUrl.includes('.net') || !!process.env.DATABASE_URL;
+
 // Initialize PostgreSQL Database
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/hassan_travels',
-    ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
+    connectionString: dbUrl,
+    ssl: isRemoteDb ? { rejectUnauthorized: false } : false
 });
 
 pool.connect((err, client, release) => {
     if (err) {
         console.error('Error connecting to PostgreSQL database:', err.stack);
     } else {
-        console.log('Connected to the PostgreSQL database.');
+        console.log('Connected to the PostgreSQL database (Supabase).');
         release();
         initDatabaseTables();
     }
